@@ -63,6 +63,9 @@ namespace DataLayer.DAOs
 
                     sqlCommand.CommandText = realSelectQuery;
                     sqlCommand.CommandType = CommandType.Text;
+
+                    int result = sqlCommand.ExecuteNonQuery();
+                    Console.WriteLine(result);
                 }
                 sqlConnection.Close();
             }
