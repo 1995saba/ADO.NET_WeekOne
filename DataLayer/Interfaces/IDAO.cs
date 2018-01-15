@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataLayer.Interfaces
+{
+    // Data Access Object
+    public interface IDAO<T> where 
+        T: class
+    {
+        void Create(T t);
+        void Update(T t);
+        void Delete<U>(ref U id);
+        T Read<U>(ref U id);
+        ICollection<T> Read();
+    }
+}
